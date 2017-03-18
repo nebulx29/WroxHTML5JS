@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTF-8'/>
+	<title>HTML5 Validation</title>
+	<link rel="stylesheet" type="text/css" href="styles.css"/>
+</head>
+<body>
+	<h1>Contact details</h1>
+
+	<table>
+		<tbody>
+				<tr>
+					<td>Contact name</td>
+					<td><input name="contactName" type="text" id="contactName" required autofocus autocomplete="off" class="validated" pattern=".{5,20}" /></td>
+				</tr>
+					<td>Phone number</td>
+					<td><input name="phoneNumber" type="text" id="phoneNumber" class="validated" required pattern="[0-9() ]{5,15}" /></td>
+				<tr>
+					<td>Email address</td>
+					<td><input name="emailAddress" type="email" id="emailAddress" required class="validated" /></td>
+				</tr>
+				<tr>
+					<td>Company Name</td>
+					<td>
+						<select name="companyName" type="email" id="companyName" required class="validated" >
+							<option value="">Please select</option>
+							<option value="1">ABC Inc.</option>
+							<option value="2">XYZ Ltd.</option>
+							<option value="3">ACME Int.</option>
+						</select>
+					</td>
+				</tr>
+		</tbody>
+	</table>
+
+</body>
+
+<script src="scripts.js" />
+</html>
