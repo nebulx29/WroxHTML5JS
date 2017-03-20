@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8"/>
+		<meta charset="utf-8">
 		<title>HTML5 Validation</title>
-		<link rel="stylesheet" type="text/css" href="styles.css"/>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<script src="scripts.js"></script>
 	</head>
 	<body>
-		<div class="box" style="background:red" />
-		<div class="box" style="background:red" />
-		<div class="box" style="background:red" />
-		<p/>
-		<div class="box" />
-		<div class="box" />
-		<div class="box" />
+		<div class="box" draggable="true" ondragstart="startDragging(event)" style="background:red" ondragend="dragEnded(event)"></div>
+		<div class="box" draggable="true" ondragstart="startDragging(event)" style="background:green"  ondragend="dragEnded(event)"></div>
+		<div class="box" draggable="true" ondragstart="startDragging(event)" style="background:blue"  ondragend="dragEnded(event)"></div>
+		<p>
+		<div class="box" ondrop="drop(event)" 
+						 ondragover="allowDrop(event)" 
+						 ondragenter="setBorderSize(event, '4px')" 
+						 ondragleave="setBorderSize(event, '2px')"></div>
+		<div class="box" ondrop="drop(event)" 
+						 ondragover="allowDrop(event)" 
+						 ondragenter="setBorderSize(event, '4px')" 
+						 ondragleave="setBorderSize(event, '2px')"></div>
+		<div class="box" ondrop="drop(event)" 
+						 ondragover="allowDrop(event)" 
+						 ondragenter="setBorderSize(event, '4px')" 
+						 ondragleave="setBorderSize(event, '2px')"></div>
 	</body>
 </html>

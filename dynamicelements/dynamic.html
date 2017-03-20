@@ -2,26 +2,31 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>HTML5 Validation</title>
+		<title>HTML5 Dynamic Elements</title>
 		<link rel="stylesheet" type="text/css" href="styles.css">
 		<script src="scripts.js"></script>
 	</head>
 	<body>
-		<div class="box" draggable="true" ondragstart="startDragging(event)" style="background:red" ondragend="dragEnded(event)"></div>
-		<div class="box" draggable="true" ondragstart="startDragging(event)" style="background:green"  ondragend="dragEnded(event)"></div>
-		<div class="box" draggable="true" ondragstart="startDragging(event)" style="background:blue"  ondragend="dragEnded(event)"></div>
-		<p>
-		<div class="box" ondrop="drop(event)" 
-						 ondragover="allowDrop(event)" 
-						 ondragenter="setBorderSize(event, '4px')" 
-						 ondragleave="setBorderSize(event, '2px')"></div>
-		<div class="box" ondrop="drop(event)" 
-						 ondragover="allowDrop(event)" 
-						 ondragenter="setBorderSize(event, '4px')" 
-						 ondragleave="setBorderSize(event, '2px')"></div>
-		<div class="box" ondrop="drop(event)" 
-						 ondragover="allowDrop(event)" 
-						 ondragenter="setBorderSize(event, '4px')" 
-						 ondragleave="setBorderSize(event, '2px')"></div>
+		<h1>Details</h1>
+		<header>This page provides an example of the summary and details tags</header>
+		<details>
+				<summary>Table of contents</summary>
+				<ul>
+					<li>Lesson 1</li>
+					<li>Lesson 2</li>
+					<li>Lesson 3</li>
+					<li>Lesson 4</li>
+					<li>Lesson 5</li>
+				</ul>
+		</details>
+		
+		<h1>Meter</h1>
+		<progress id="progressBar" value="0" min="0" max="100"></progress>
+		
+		<h1>Range Element</h1>
+		0%
+		<input type="range" name="percentComplete" min="0" max="100" step="5" value="50"></input>
+		100%
+		
 	</body>
 </html>
